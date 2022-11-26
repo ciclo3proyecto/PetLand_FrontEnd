@@ -1,0 +1,78 @@
+<body>
+    <div class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <div class="col s12">
+                <br>
+                <h5 class="teal-text darken-4"><strong>Administración de Sucursales</strong></h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s4">
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                    <button class="btn waves-effect waves-light" ng-click="function()">
+                        Buscar
+                    </button>
+                </form>
+            </div>
+            <div class="col s1 offset-s6">
+                <a routerLink="/administracion/crear-sucursal" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Departamento</th>
+                            <th>Ciudad</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let p of listadoRegistros | paginate: { itemsPerPage: 5, currentPage: pagina }">
+                            <td>{{p.Id}}</td>
+                            <td>{{p.Departamento}}</td>
+                            <td>{{p.Ciudad}}</td>
+                            <td>{{p.Direccion}}</td>
+                            <td>{{p.Telefono}}</td>
+                            <td>
+                                <button class="btn waves-effect waves-light green" type="button"  name="action">
+                                    <i class="material-icons">create</i>
+                                </button>
+                                <button class="btn waves-effect waves-light red" type="button" (click)="VerificarEliminacion(p.Id, p.Direccion)" name="action">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div >
+                <pagination-controls class="my-pagination"
+                      (pageChange)="pagina = ($event)"
+                      previousLabel="Anterior"
+                      nextLabel="Siguiente"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+                </pagination-controls>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+

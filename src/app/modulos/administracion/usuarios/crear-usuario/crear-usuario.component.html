@@ -1,0 +1,92 @@
+<body>
+    <div class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <div class="col s12">
+                <br>
+                <h5 class="teal-text darken-4"><strong>Adicionar o Editar Sucursal</strong></h5>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">sentiment_very_satisfied</i>
+                            <input id="txtUsuario" type="text" class="autocomplete">
+                            <label for="txtUsuario">Usuario</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">https</i>
+                            <input id="txtClave" type="password" class="validate">
+                            <label for="txtClave">Clave</label>
+                        </div>
+                        <div class="input-field col s1">
+                            <i class="material-icons prefix">supervisor_account</i>
+                            <label>Perfil</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <select formControlName="txtPefil" class="browser-default " required="" aria-required="true">
+                                <option value="">Seleccione...</option>
+                                <option value="Asesor">Asesor</option>
+                                <option value="Cliente">Cliente</option>
+                                <option value="Administrador">Administrador</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">assignment</i>
+                            <input id="txtCedula" type="number" class="validate">
+                            <label for="txtCedula">Cedula</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="txtNombres" type="text" class="validate">
+                            <label for="txtNombres">Nombres</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="txtApellidos" type="text" class="validate">
+                            <label for="txtApellidos">Apellidos</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">add_location</i>
+                            <input id="txtCiudad" type="text" class="validate">
+                            <label for="txtCiudad">Ciudad</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">email</i>
+                            <input id="txtEmail" type="email" class="validate">
+                            <label for="txtEmail">Email</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">local_phone</i>
+                            <input id="telefono" type="number" class="validate">
+                            <label for="telefono">Telefono</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3">
+                            <a routerLink="/administracion/consultar-sucursal"  class="btn waves-effect waves-light orange col 2">
+                                <i class="material-icons">keyboard_backspace</i>
+                                Cancelar
+                            </a>   
+                        </div>
+
+                        <div class="col s3">
+                            <button class="btn waves-effect waves-light green col 2" type="submit" name="guardar">
+                                <i class="material-icons">check</i>
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,421 @@
+/* inicio contenido*/
+nav {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* tamaÃ±o titulo Pet Land inicio */    
+h1 {
+    font-size: 80px;
+}
+
+/* texto Pet Land, perro y el niÃ±o */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1d273b;
+    font-weight: 300; 
+}
+
+/* texto Pet Land */
+.contenedor {
+    width: 100%;
+    max-width: 1800px; /* ancho texto Pet Land */
+    margin: auto;
+    overflow: visible; /* texto sobresale por encima del div. */   
+}
+
+/* contenedor imagen perro y el niÃ±o */
+.contenido-header {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido-header>img {
+    width: 600px; /* tamaÃ±o img perro y niÃ±o */
+    animation: ease-in animat 2s; /* duracion img perro y niÃ±o */
+    border-radius: 30px; /* tamaÃ±o bordes curvo img perro y niÃ±o */
+}
+
+@keyframes animat {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.textos-header {
+    margin: 100px; /* tamaÃ±o texto Pet Land */
+}
+
+/* no me queda claro */
+.contenido-header p {
+    font-weight: 100;
+    margin-top: 14px;
+    color: #5D6678;
+}
+
+/* tambien para titulo Quienes Somos */
+.titulo {    
+    color: rgb(143, 140, 140);
+    text-decoration: solid;
+    font-size: 50px;
+    border: solid;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* contenedor experts texto contenido Quienes Somos */
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;    
+}
+
+.cont-expert{
+    width: 200%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cont-expert img { /* tamaÃ±o img animales Quienes Somos */ 
+    width: 75%;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* contenedor texto mision y vision */
+.flow-text{
+    text-align: center; 
+    font-weight: 300%;
+    color: #1d273b;
+    margin-bottom: 20px;
+    font-size: 38px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    -webkit-text-size-adjust: 50%;
+    line-height: 90%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1800px; /* ancho texto Pet Land */
+    margin: auto;    
+}
+
+.interrogacion>img {
+    width: 1600px; /* tamaÃ±o img almacen Quienes Somos */    
+    height: 800px;    
+    margin: auto; 
+       
+}
+
+/* css Productos y Servicios contenedores productos */    
+.contenedor1 {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
+    
+}
+
+/* no me queda claro */
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+
+.productos{
+    background-image: linear-gradient(to top, rgba(65, 212, 219, 0.6) 0%, rgba(122, 222, 227, 0.6) 100%);/* color fondo contenedor producto */
+}
+
+.productos0{
+    background-image: linear-gradient(to top, rgba(92, 218, 115, 0.6) 0%, rgba(97, 196, 127, 0.6) 100%); /* color fondo contenedor Inicio PEt Land */
+}
+
+.productos1{
+    background-image: linear-gradient(to top, rgba(244, 240, 102, 0.6) 0%, rgba(182, 194, 129, 0.6) 100%);/* color fondo contenedor nuestras mascotas */
+}
+
+.productos2{
+    background-image: linear-gradient(to top, rgba(236, 77, 245, 0.6) 0%, rgba(250, 175, 227, 0.6) 100%);/* color fondo contenedor contactanos */
+}
+
+.contenedor-articulo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px; /* margen de titulo de productos a contenedores */
+    justify-content: space-around;
+}
+
+.articulo {
+    width: 29%; /* ancho contenedor producto */
+    background: #fff; /* color contenedor producto */
+    margin-bottom: 60px;
+    border-radius: 30px; /* borde contenedor producto */
+    padding: 15px 20px 40px 30px;
+    transition: 1s;
+    animation: ease-in animat 2s;
+}
+
+.articulo:hover {
+    box-shadow: 0 4px 50px rgb(57, 132, 254, 50);
+}
+
+/* no me queda claro */
+.productos>p {
+    font-weight: 100;
+    color: #5D6678;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* no me queda claro */
+.productos>a {
+    color: #5D6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.gallery{ /* color contenedor Mascotas Pet Land */
+    background-image: linear-gradient(to top, rgba(230, 91, 31, 0.6) 0%, rgba(140, 220, 74, 0.6) 100%);
+}
+
+.contenedor-galeria{ /* contenedor Mascotas Pet Land */
+    display:flex;  
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
+}
+
+.img-galeria{ /* tamaÃ±o contenedor Mascotas Pet Land */
+    object-fit: cover;
+    width: 30%;
+    height: 350px;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    margin: auto;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 30px;
+}
+
+/* contenedor planes */
+.number{ 
+    display: inline-block;
+    background-image: linear-gradient(to top, #0a0a0a 0%, #000000 100%);
+    width: 30px;
+    height: 30px;
+    color: rgb(241, 234, 234);
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 500;
+    line-height: 30px;
+    margin-right: 20px;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.section-title{        
+    position: static;    
+    display: inline-block;
+    margin-top: 10px;
+    width: 5px;    
+    font-weight: 100;
+    color: rgba(7, 45, 81, 0.878);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    max-width: 1000px;
+}
+
+.semb-google-map-container{
+    width: 200%;
+    height: 75%;
+}
+
+/* formulario */
+
+.formulario{
+    
+        background: #2570ff;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .formulario1{
+    
+        background: #c9f081;
+        width: 100%;
+        height: 55%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: visible;
+        
+    }
+
+.services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services>img {
+    width: 500px;
+}
+
+.box-skills {
+    margin: 30px 30px 0 0;
+}
+
+.box-skills h4 {
+    font-size: 35px;
+    background: #f2f2f2;
+    width: 350px;
+    border-radius: 6px;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 10px;
+}
+
+.box-skills i {
+    color: #1FDE82;
+    font-size: 20px;
+}
+
+/*formulario*/
+form{
+background: #fff;
+    width: 35%;
+    padding: 30px 0;
+    border-radius: 50px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+
+.form>h1{
+text-align: center;
+}
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 20px;
+}
+
+input, textarea{
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 50px 10px 50px 5px;
+    display: block;
+    width: 100%;
+    border:solid;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+
+input:focus,textarea:focus{
+    outline: none;
+    color: rgb(94,93,93);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #2196F3;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+    text-align: center;
+}
+
+
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    transition: 0.3s ease all;
+    left: 0%;
+}
+button{
+    background: #FC5C7D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1100px){
+    form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px){
+    form{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:450px){
+    form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:300px){
+    form{
+        width: 90%;
+    }
+}
