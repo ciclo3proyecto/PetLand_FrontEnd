@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { GestionRoutingModule } from './gestion-routing.module';
 import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
@@ -14,6 +15,7 @@ import { ConsultarPedidoComponent } from './pedidos/consultar-pedido/consultar-p
 import { CrearPedidoComponent } from './pedidos/crear-pedido/crear-pedido.component';
 import { EditarPedidoComponent } from './pedidos/editar-pedido/editar-pedido.component';
 import { EliminarPedidoComponent } from './pedidos/eliminar-pedido/eliminar-pedido.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +35,10 @@ import { EliminarPedidoComponent } from './pedidos/eliminar-pedido/eliminar-pedi
   ],
   imports: [
     CommonModule,
-    GestionRoutingModule
+    GestionRoutingModule,
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class GestionModule { }

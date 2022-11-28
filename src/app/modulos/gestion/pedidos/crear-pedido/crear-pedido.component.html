@@ -1,1 +1,81 @@
-<p>crear-pedido works!</p>
+<body>
+    <div class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <div class="col s12">
+                <br>
+                <h5 class="teal-text darken-4"><strong>Agregar o Editar Pedidos</strong></h5>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">                        
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">supervisor_account</i>
+                            <input id="txtUsuariosId" type="text" class="validate">
+                            <label>Usuarios</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">perm_contact_calendar</i>
+                            <input id="txtFechaPedido" type="date" class="validate">
+                            <label for="txtFechaPedido">Fecha Pedido</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s1">
+                            <i class="material-icons prefix">near_me</i>
+                            <label>Estado Pedido</label>
+                        </div>
+                        
+                        <div class="input-field col s5">
+                            <select formControlName="txtEstadoPedido" class="browser-default " required="" aria-required="true">
+                                <option value="">Seleccione...</option>
+                                <option value="En proceso de envio">En proceso de envio</option>
+                                <option value="Despachado">Despachado</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">perm_contact_calendar</i>
+                            <input id="txtFactura" type="number" class="validate">
+                            <label for="txtFactura">Factura</label>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">perm_contact_calendar</i>
+                            <input id="txtFechaFactura" type="date" class="validate">
+                            <label for="txtFechaFactura">Fecha Factura</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">payment</i>
+                            <input id="txtTotal" type="number" class="validate">
+                            <label for="txtTotal">Total</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3">
+                            <a routerLink="/gestion/consultar-pedido"  class="btn waves-effect waves-light orange col 2">
+                                <i class="material-icons">keyboard_backspace</i>
+                                Cancelar
+                            </a>   
+                        </div>
+
+                        <div class="col s3">
+                            <button class="btn waves-effect waves-light green col 2" type="submit" name="guardar">
+                                <i class="material-icons">check</i>
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

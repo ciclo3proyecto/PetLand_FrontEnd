@@ -1,1 +1,28 @@
-<p>identificacion works!</p>
+<div class="container">
+  <div class="card-content">
+    <h4 class="center blue-text">Hola petlover! :D</h4>
+    <form [formGroup]="fgValidador">
+      <div class="row">
+        <div class="col s12 m4 l4 offset-m4 offset-l4">
+          <div class="input-field col s12 m12 l12">
+            <i class="material-icons prefix">perm_identity</i>
+            <input formControlName="usuario" id="usuario" type="text" placeholder="Usuario*" class="validate">
+          </div>
+          <div class="input-field col s12 m12 l12">
+            <i class="material-icons prefix">lock</i>
+            <input formControlName="clave" id="clave" type="password" placeholder="Contraseña*" class="validate">
+          </div>
+        </div>
+      </div>
+      <div class="row center-align">
+
+            <button [disabled]="fgValidador.invalid" class="btn btn-large waves-effect waves-light blue" type="submit"
+              (click)="identificarUsuario()" name="action">Ingresar
+              <i class="material-icons right">send</i>
+            </button>
+
+      </div>
+    </form>
+  </div>
+
+</div>

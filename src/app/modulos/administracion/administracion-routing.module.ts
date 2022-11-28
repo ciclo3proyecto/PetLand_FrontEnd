@@ -10,8 +10,6 @@ import { EditarProductoServicioComponent } from './productos-servicios/editar-pr
 import { EliminarProductoServicioComponent } from './productos-servicios/eliminar-producto-servicio/eliminar-producto-servicio.component';
 import { ConsultarSucursalComponent } from './sucursales/consultar-sucursal/consultar-sucursal.component';
 import { CrearSucursalComponent } from './sucursales/crear-sucursal/crear-sucursal.component';
-import { EditarSucursalComponent } from './sucursales/editar-sucursal/editar-sucursal.component';
-import { EliminarSucursalComponent } from './sucursales/eliminar-sucursal/eliminar-sucursal.component';
 import { ConsultarUsuarioComponent } from './usuarios/consultar-usuario/consultar-usuario.component';
 import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 import { EditarUsuarioComponent } from './usuarios/editar-usuario/editar-usuario.component';
@@ -51,17 +49,12 @@ const routes: Routes = [
     component: ConsultarProductoServicioComponent
   },
   {
-    path: "crear-sucursal",
+    path: "crear-sucursal/:id",
     component: CrearSucursalComponent
   },
   {
-    path: "editar-sucursal",
-    component: EditarSucursalComponent
-  },
-  {
-    path: "eliminar-sucursal",
-    component: EliminarSucursalComponent
-
+    path: "crear-sucursal",
+    component: CrearSucursalComponent
   },
   {
     path: "consultar-sucursal",
@@ -71,6 +64,11 @@ const routes: Routes = [
     path: "crear-usuario",
     component: CrearUsuarioComponent
   },
+  {
+    path: "crear-usuario/:id",
+    component: CrearUsuarioComponent
+  },
+
   {
     path: "editar-usuario",
     component: EditarUsuarioComponent

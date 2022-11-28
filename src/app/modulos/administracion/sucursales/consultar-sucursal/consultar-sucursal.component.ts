@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModelSucursal } from 'src/app/modelos/sucursal.model';
 import { SucursalesService } from 'src/app/servicios/sucursales.service';
-import { PruebaService } from '../../../../servicios/prueba.service';
+import { SeguridadService } from '../../../../servicios/seguridad.service';
+import { ModeloIdentificacion } from '../../../../modelos/identificar.modelo';
 
 @Component({
   selector: 'app-consultar-sucursal',
@@ -11,17 +13,27 @@ import { PruebaService } from '../../../../servicios/prueba.service';
 export class ConsultarSucursalComponent implements OnInit {
 
   pagina: number = 1;
-
   listadoRegistros: ModelSucursal[] = [];
 
-  constructor(private sucursalesService: SucursalesService) { }
+  constructor(private sucursalesService: SucursalesService,
+              private router: Router,
+              private seguridadServicio : SeguridadService
+             ) { }
 
   ngOnInit(): void {
+    //validamos que este logueado
+    this.seguridadServicio.OptenerDatosUsuarioEnSesion().subscribe((datos: ModeloIdentificacion) =>{
+
+    if (!datos.estaIdentificado){
+      this.router.navigate(['/inicio']);
+    }
+    })
+
     this.ObtenerListadoSucursales();
   }
 
 
-  ObtenerListadoSucursales(){
+  private ObtenerListadoSucursales(){
     this.sucursalesService
       .ObtenerRegistros()
       .subscribe((datos: ModelSucursal[]) => {
@@ -41,6 +53,13 @@ export class ConsultarSucursalComponent implements OnInit {
         alert("Error eliminando sucursal ");
       });
     }
+  }
+
+  EditarRegistro(id?:string)
+  {
+
+    let url = "/administracion/crear-sucursal/"+id;
+    this.router.navigate([url])
   }
 
 }

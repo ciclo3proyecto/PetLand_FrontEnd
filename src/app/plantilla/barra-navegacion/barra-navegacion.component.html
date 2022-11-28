@@ -6,28 +6,63 @@
     <a href="#" data-target="mobile-demo" class="sidenav-trigger">
       <i class="material-icons">menu</i></a
     >
-    <ul class="right hide-on-med-and-down">
-      <li><input id="search" type="text" name="search" value=""
+    <div [ngSwitch]="this.rol" >
+
+      <!--Menu de Administrador-->
+      <ul *ngSwitchCase="1" class="right hide-on-med-and-down">
+        <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Inicio</a></li>
+
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/consultar-usuario">Usuarios</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/consultar-producto-servicio">Productos y Servicios</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/consultar-sucursal">Sucursales</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/consultar-plan">Planes</a></li>
+
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesión</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">Iniciar Sesión</a></li>
+      </ul>
+
+      <!--Menu de Asesor-->
+      <ul *ngSwitchCase="2" class="right hide-on-med-and-down">
+        <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Inicio</a></li>
+
+        <li *ngIf="seInicioSesion"><a routerLink="gestion/consultar-mascota">Mascotas</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="gestion/consultar-prospecto">Prospectos</a></li>
+
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesión</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">Iniciar Sesión</a></li>
+      </ul>
+
+      <!--Menu de Cliente-->
+      <ul *ngSwitchCase="3" class="right hide-on-med-and-down">
+        <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Inicio</a></li>
+
+        <li *ngIf="seInicioSesion"><a routerLink="gestion/consultar-pedido">Pedidos</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="gestion/consultar-mascota">Mascotas</a></li>
+
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesión</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">Iniciar Sesión</a></li>
+      </ul>
+
+      <!--Menu por defecto-->
+      <ul *ngSwitchCase="0" class="right hide-on-med-and-down">
+        <li><input id="search" type="text" name="search" value=""
           placeholder="¿Qué estas buscando?"
           class="input-text" maxlength="128" role="combobox"
           aria-haspopup="false" aria-autocomplete="both"
           autocomplete="on" aria-expanded="false"/></li>
       <li class="active">
-        <a href="administracion/consultar-usuario"><i class="large material-icons">search</i></a>
+        <a href="administracion/consultar-producto-servicio"><i class="large material-icons">search</i></a>
       </li>
-      <li><a href="administracion/consultar-usuario">Usuarios</a></li>
-      <li><a href="administracion/consultar-producto-servicio">Productos y Servicios</a></li>
-      <li><a href="gestion/consultar-pedido">Pedidos</a></li>
-      <li><a href="gestion/consultar-mascota">Mascotas</a></li>
-      <li><a href="gestion/consultar-prospecto">Prospectos</a></li>            
-      <li><a href="administracion/consultar-sucursal">Sucursales</a></li>
-      <li><a href="administracion/consultar-plan">Planes</a></li>
-      <li><a href="seguridad/identificacion">Iniciar Sesion</a>
-      </li>      
-    </ul>
+        <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Inicio</a></li>
+
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesión</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificacion">Iniciar Sesión</a></li>
+      </ul>
+
+    </div>
+
   </div>
 </nav>
-<br />
 <br />
 <br />
 
@@ -37,8 +72,5 @@
   <li><a href="collapsible.html">Javascript</a></li>
   <li><a href="mobile.html">Mobile</a></li>
 </ul>
-
-<br>
-<br>
 <br>
 

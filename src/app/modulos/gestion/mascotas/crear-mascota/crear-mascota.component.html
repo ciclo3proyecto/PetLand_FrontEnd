@@ -1,1 +1,120 @@
-<p>crear-mascota works!</p>
+<body>
+    <div class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <div class="col s12">
+                <br>
+                <h5 class="teal-text darken-4"><strong>Agregar o Modificar Mascota</strong></h5>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <form class="col s12">
+
+                    <div class="row">                        
+                            <div class="input-field col s1">
+                                <i class="material-icons prefix">supervisor_account</i>
+                                <label>Usuario</label>
+                            </div>                            
+                        
+                        <div class="input-field col s5">
+                            <select formControlName="txtUsuario" class="browser-default " required=""
+                                aria-required="true">
+                                <option value="">Seleccione...</option>
+                                <option value="Asesor">Tommy Gato</option>
+                                <option value="Cliente">Danger Perro</option>
+                                <option value="Administrador">Luna Coneja</option>
+                            </select>
+                        </div>
+
+                        
+                        <div class="input-field col s1">
+                            <i class="material-icons prefix">supervisor_account</i>
+                            <label>Plan</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <select formControlName="txtPlan" class="browser-default " required=""
+                                aria-required="true">
+                                <option value="">Seleccione...</option>
+                                <option value="Asesor">Criollos</option>
+                                <option value="Cliente">SuperPet</option>
+                                <option value="Administrador">Pet-Senior</option>
+                            </select>
+                        </div>
+                    </div>
+
+                   <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">pets</i>
+                            <input id="txtNombre" type="text" class="validate">
+                            <label for="txtNombre">Nombre</label>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">pets</i>
+                                <input id="txtEdad" type="number" class="validate">
+                                <label for="txtEdad">Edad</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">pets</i>
+                                <input id="txtEspecie" type="text" class="validate">
+                                <label for="txtEspecie">Especie</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">add_a_photo</i>
+                                <input id="txtFoto" type="text" class="validate">
+                                <label for="txtFoto">Foto</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s1">
+                                <i class="material-icons prefix">pets</i>
+                                <label>Estado</label>
+                            </div>
+                            
+
+                            <div class="input-field col s5">
+                                <select formControlName="txtEstado" class="browser-default " required="" aria-required="true">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Activo">01. Activo</option>
+                                    <option value="Inactivo">02. Inactivo</option>
+                                    <option value="Rechazado">03. Rechazado</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">pets</i>
+                                <input id="txtTelefono" type="text" class="validate">
+                                <label for="txtTelefono">Comentario</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3">
+                            <a routerLink="/gestion/consultar-mascota"
+                                class="btn waves-effect waves-light orange col 2">
+                                <i class="material-icons">keyboard_backspace</i>
+                                Cancelar
+                            </a>
+                        </div>
+
+                        <div class="col s3">
+                            <button class="btn waves-effect waves-light green col 2" type="submit" name="guardar">
+                                <i class="material-icons">check</i>
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

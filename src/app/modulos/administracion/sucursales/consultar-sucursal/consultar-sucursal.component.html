@@ -16,7 +16,7 @@
                         <label for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
-                    <button class="btn waves-effect waves-light" ng-click="function()">
+                    <button class="btn waves-effect waves-light" ng-click="Buscar()">
                         Buscar
                     </button>
                 </form>
@@ -47,7 +47,7 @@
                             <td>{{p.Direccion}}</td>
                             <td>{{p.Telefono}}</td>
                             <td>
-                                <button class="btn waves-effect waves-light green" type="button"  name="action">
+                                <button class="btn waves-effect waves-light green" type="button" (click)="EditarRegistro(p.Id)" name="action">
                                     <i class="material-icons">create</i>
                                 </button>
                                 <button class="btn waves-effect waves-light red" type="button" (click)="VerificarEliminacion(p.Id, p.Direccion)" name="action">
@@ -55,7 +55,7 @@
                                 </button>
                             </td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
                 <div >
