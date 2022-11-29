@@ -2,16 +2,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModeloIdentificacion } from '../modelos/identificar.modelo';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeguridadService {
 
-  url= "http://localhost:3000";
   datosUsuarioEnSesion= new BehaviorSubject<ModeloIdentificacion>(new ModeloIdentificacion())
 
-  constructor(private http : HttpClient) { 
+  constructor(private http : HttpClient) {
     this.VerificarSesionActual();
   }
 
@@ -40,13 +40,15 @@ export class SeguridadService {
     return this.datosUsuarioEnSesion.asObservable();
   }
 
-  //llamado identificacion de cliente 
+  //llamado identificacion de cliente
   Identificar(usuario: string, clave: string): Observable<ModeloIdentificacion>{
-    return this.http.post<ModeloIdentificacion>(`${this.url}/identificarUsuario`,{
+    return this.http.post<ModeloIdentificacion>(`${environment.urlApi}/identificarUsuario`,{
       usuario: usuario,
       clave: clave
         },{
           headers: new HttpHeaders({
+            "Content-Type": "application/json; charset=utf-8",
+            "accept": "application/json",
             })
         })
   }
@@ -108,5 +110,5 @@ export class SeguridadService {
       return "";
     }
   }
-  
+
 }
